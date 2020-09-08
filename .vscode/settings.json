@@ -1,0 +1,8 @@
+{
+  "appService.zipIgnorePattern": [
+    "node_modules{,/**}",
+    ".vscode{,/**}"
+  ],
+  "appService.deploySubpath": ".",
+  "appService.defaultWebAppToDeploy": "/subscriptions/c455ee08-c353-4457-af23-261292d50e08/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/quotesandriddles-snehil"
+}

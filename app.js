@@ -14,7 +14,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static("./client/facts_and_riddles/build/"));
+app.use(express.static("./client/build/"));
 
 mongoose.connect(
   `mongodb+srv://${process.env.dbUser}:${process.env.dbPass}@cluster0.ojcfk.azure.mongodb.net/facts?retryWrites=true&w=majority`,
@@ -36,7 +36,7 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res) => {
   res.sendFile("index.html", {
-    root: __dirname + "/client/facts_and_riddles/build/",
+    root: __dirname + "/client/build/",
   });
 });
 
